@@ -5,6 +5,7 @@
 @section('content')
       <!-- Content -->
       <article>
+
         <header class="section background-dark">
           <div class="line">        
             <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">Evènements à la maison des ligues.</h1>
@@ -34,7 +35,32 @@
               </div>
             </div>      
           </div>
-        </div> 
+        </div>
+        @foreach  ($evenements as $events)
+        <div class="section background-white"> 
+          <div class="line">  
+            <h3 class="text-size-40 margin-bottom-30">{{ $events->intitule }}/ {{ $events->lieu }}</h2>
+            <h4>{{ $events->date_deb }} / {{ $events->date_fin }}</h3>
+            <hr class="break-small background-primary margin-bottom-30">
+          
+            <div class="line margin-top-30">
+              <div class="margin">
+                <div class="s-12 m-6 l-6">
+              <img src="{{ asset('/img/evenements/'.$events->url_image) }}" alt="">
+
+              </div>
+                <div class="s-12 m-6 l-6">
+                  <p class="margin-top-30">
+                  {{ $events->details }}
+                  </p>
+                  
+                </div>
+              </div>
+            </div>      
+          </div>
+        </div>
       </article>
     <!-- termine le corps de la page -->
+        @endforeach
+        
 @endsection

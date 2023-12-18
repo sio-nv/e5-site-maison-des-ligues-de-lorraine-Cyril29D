@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Evenement;
+use Illuminate\Support\Facades\File;
 
 class MainController extends Controller
 {
@@ -28,6 +30,9 @@ class MainController extends Controller
 
     public function evenements()
     {
-        return view('visiteurs.evenements');
+        $resultats = Evenement::all();
+        return view('visiteurs.evenements', ["evenements" => $resultats]);
+        
     }
+ 
 }
