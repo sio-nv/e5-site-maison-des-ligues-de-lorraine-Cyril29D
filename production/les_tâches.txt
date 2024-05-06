@@ -1,0 +1,5 @@
+les tâches :
+-modification de la vue dans le dossier view/visiteur puis le fichier evenements.blade.php
+-Recherche de la fonctionnalité sur le web pour que l'utilisateur puisse choisir son évenement grâce à "Bootstrap"
+-capturer le code 
+-faire un git push pour envoyer vers GitHub en ligne 
